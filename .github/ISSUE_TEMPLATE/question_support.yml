@@ -1,0 +1,75 @@
+name: Question or support request
+description: Ask for help with a Graalbase service, tool, or user documentation.
+title: "[Question]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for how-to questions, setup help, or questions about the user documentation. If a service or tool does not behave as expected, use the bug report form. Search existing issues first.
+
+        Issues are public. Do not include passwords, access tokens, credentials, private keys, or customer data. Review logs and diagnostics before attaching them.
+
+  - type: input
+    id: affected_area
+    attributes:
+      label: Which service, tool, or documentation topic is this about?
+      description: Name the service or tool, or the topic you need help with.
+      placeholder: Database, Graalbase CLI, Studio, or a documentation topic
+    validations:
+      required: true
+
+  - type: dropdown
+    id: project_target
+    attributes:
+      label: Where are you using Graalbase?
+      description: Choose an option if your question is about a specific project.
+      options:
+        - Local project
+        - Hosted project
+        - Both
+        - Not sure
+        - Not applicable
+    validations:
+      required: false
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you need help with?
+      description: Describe what you are trying to do and what you need to know.
+      placeholder: Include the steps or task you need help with.
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_tried
+    attributes:
+      label: What have you tried?
+      description: Include the steps you took and any result or error you received.
+    validations:
+      required: false
+
+  - type: input
+    id: documentation_link
+    attributes:
+      label: Documentation page
+      description: If your question is about documentation, link to the relevant page or section.
+      placeholder: https://...
+    validations:
+      required: false
+
+  - type: textarea
+    id: versions_and_setup
+    attributes:
+      label: Versions and setup
+      description: For a local stack, include the Graalbase version. Also include the Graalbase CLI or JavaScript SDK version, operating system, and relevant project directory or stack details.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Add any other details that may help answer your question.
+    validations:
+      required: false
