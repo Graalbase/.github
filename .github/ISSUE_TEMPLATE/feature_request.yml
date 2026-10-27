@@ -1,0 +1,53 @@
+name: Feature request
+description: Suggest an improvement to a Graalbase service or tool.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to suggest a change to a Graalbase service or tool. Search existing issues first.
+
+        Issues are public. Do not include passwords, access tokens, credentials, private keys, or customer data.
+
+  - type: input
+    id: affected_area
+    attributes:
+      label: Which service or tool should this change affect?
+      description: Name the service or tool, such as Database, Auth, Storage, Observability, Gateway, Graalbase CLI, Graalbase JavaScript SDK, or Studio.
+      placeholder: Service or tool name
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the task or limitation this change should address.
+      placeholder: Describe what you need to do and what is missing.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: What should change?
+      description: Describe the result you need.
+      placeholder: Describe the improvement you are requesting.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe any workaround or alternative you have tried.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Add examples, screenshots, or documentation links that help explain the request.
+    validations:
+      required: false
